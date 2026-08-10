@@ -54,6 +54,20 @@ The animation below provides a walkthrough of Geneomelpha's interface, workflow,
 
 ---
 
+## For PIs / Reviewers
+
+Start here if you are reviewing this repository for academic, research, or translational bioinformatics evaluation:
+
+1. [`docs/reviewer_summary.md`](docs/reviewer_summary.md)
+2. [`docs/research_limitations.md`](docs/research_limitations.md)
+3. [`docs/architecture.md`](docs/architecture.md)
+4. [`docs/workflow.md`](docs/workflow.md)
+5. [`docs/installation.md`](docs/installation.md)
+
+> Geneomelpha is a proof-of-concept educational and translational bioinformatics platform. It is not a clinical decision-support tool, is not clinically validated, and must not be used for diagnosis, treatment, or medical decision-making.
+
+---
+
 ### 🚀 Experience Geneomelpha Online
 
 <a href="https://genelpha.netlify.app/">
