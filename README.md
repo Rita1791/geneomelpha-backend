@@ -34,7 +34,7 @@
   <a href="https://in.linkedin.com/in/ritika-rawat-551107219">
     <img src="https://img.shields.io/badge/LinkedIn-Ritika_Rawat-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="Ritika Rawat on LinkedIn" />
   </a>
-  <a href="mailto:ritikarawat27@outlook.com">
+  <a href="mailto:ritika.rawat27@outlook.com">
     <img src="https://img.shields.io/badge/Email-Connect_with_Ritika-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email Ritika Rawat" />
   </a>
 </p>
@@ -495,7 +495,7 @@ Respect the boundary: never commit real patient reports, identifiable health inf
   <a href="https://in.linkedin.com/in/ritika-rawat-551107219">
     <img src="https://img.shields.io/badge/CONNECT_ON_LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect with Ritika on LinkedIn" />
   </a>
-  <a href="mailto:ritikarawat27@outlook.com?subject=Geneomelpha%20Research%20Enquiry">
+  <a href="mailto:ritika.rawat27@outlook.com?subject=Geneomelpha%20Research%20Enquiry">
     <img src="https://img.shields.io/badge/EMAIL_RITIKA-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritika" />
   </a>
 </p>
