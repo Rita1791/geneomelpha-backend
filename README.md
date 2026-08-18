@@ -1,517 +1,717 @@
 <p align="center">
   <a href="https://genelpha.netlify.app/">
-    <img src="assets/geneomelpha-banner.png" alt="Geneomelpha — Bridging Genomics and Understanding" width="100%" />
+    <img src="assets/geneomelpha-banner.png" alt="Geneomelpha" width="100%" />
   </a>
 </p>
 
-<h1 align="center">🧬 Geneomelpha</h1>
+# Geneomelpha
 
-<h3 align="center">Bridging Genomics &amp; Understanding</h3>
+**A translational bioinformatics prototype for making genomic-report information easier to understand without hiding the scientific uncertainty.**
 
-<p align="center">
-  A human-centered bioinformatics proof of concept for turning complex genomic-report language into clear, structured, patient-friendly explanations.
-</p>
+[Live demo](https://genelpha.netlify.app/) ·
+[Architecture](docs/architecture.md) ·
+[Research limitations](docs/research_limitations.md) ·
+[Validation strategy](research/validation-strategy.md) ·
+[Citation](CITATION.cff)
 
-<p align="center">
-  <a href="https://genelpha.netlify.app/">
-    <img src="https://img.shields.io/badge/OPEN_LIVE_DEMO-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Open live demo" />
-  </a>
-  <a href="docs/reviewer_summary.md">
-    <img src="https://img.shields.io/badge/REVIEWER_BRIEF-155E75?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Read reviewer brief" />
-  </a>
-  <a href="CITATION.cff">
-    <img src="https://img.shields.io/badge/CITE_THE_PROJECT-6D28D9?style=for-the-badge&logo=academia&logoColor=white" alt="Cite the project" />
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/LICENSE-MIT-D97706?style=for-the-badge" alt="MIT License" />
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="https://github.com/Rita1791">
-    <img src="https://img.shields.io/badge/GitHub-Rita1791-181717?style=flat-square&logo=github&logoColor=white" alt="Ritika Rawat on GitHub" />
-  </a>
-  <a href="https://in.linkedin.com/in/ritika-rawat-551107219">
-    <img src="https://img.shields.io/badge/LinkedIn-Ritika_Rawat-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="Ritika Rawat on LinkedIn" />
-  </a>
-  <a href="mailto:ritika.rawat27@outlook.com">
-    <img src="https://img.shields.io/badge/Email-Connect_with_Ritika-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email Ritika Rawat" />
-  </a>
-</p>
+## Why I built this
 
-<p align="center">
-  <strong>Proof of concept</strong> · Translational bioinformatics · Genomic literacy · Human-centered design
-</p>
+The question behind Geneomelpha is not simply *“Can genomic information be simplified?”*
 
-<a id="explore"></a>
+It is:
 
-🧭 Choose your route
+> **How much can we simplify a genomic report before we start losing the biological meaning, uncertainty, and clinical context that actually matter?**
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <a href="https://genelpha.netlify.app/"><img src="assets/icons/dashboard.svg" width="42" alt="Live platform" /></a><br />
-      <strong><a href="https://genelpha.netlify.app/">Explore the platform</a></strong><br />
-      Test the public proof-of-concept interface.
-    </td>
-    <td align="center" width="33%">
-      <a href="#platform-in-60-seconds"><img src="assets/icons/dna.svg" width="42" alt="Project summary" /></a><br />
-      <strong><a href="#platform-in-60-seconds">Understand the idea</a></strong><br />
-      See the problem, approach, and boundary.
-    </td>
-    <td align="center" width="33%">
-      <a href="#workflow"><img src="assets/icons/analysis.svg" width="42" alt="Workflow" /></a><br />
-      <strong><a href="#workflow">Follow the workflow</a></strong><br />
-      Move from service selection to explanation.
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="33%">
-      <a href="#gallery"><img src="assets/icons/genomics.svg" width="42" alt="Interface gallery" /></a><br />
-      <strong><a href="#gallery">View the interface</a></strong><br />
-      Open the full-resolution platform screens.
-    </td>
-    <td align="center" width="33%">
-      <a href="#reviewer-hub"><img src="assets/icons/researcher.svg" width="42" alt="Reviewer hub" /></a><br />
-      <strong><a href="#reviewer-hub">Review the evidence</a></strong><br />
-      Jump to architecture, scope, and limitations.
-    </td>
-    <td align="center" width="33%">
-      <a href="#connect"><img src="assets/icons/clinician.svg" width="42" alt="Connect with researcher" /></a><br />
-      <strong><a href="#connect">Connect with Ritika</a></strong><br />
-      Discuss research, genomics, or collaboration.
-    </td>
-  </tr>
-</table>
+I built this project as a small translational bioinformatics experiment around that question.
 
-<a id="demo"></a>
+Genomic reports are usually written for laboratories, clinicians, genetic counsellors, and researchers. Terms such as *pathogenic*, *likely pathogenic*, *VUS*, *carrier status*, *pharmacogenomic response*, or *tumour biomarker* have precise meanings, but they are not necessarily intuitive to someone reading a report for the first time.
 
-🎬 See Geneomelpha in motion
+My aim with Geneomelpha was therefore not to build another variant classifier.
 
-<p align="center">
-  <a href="https://genelpha.netlify.app/">
-    <img src="assets/geneomelpha-demo.gif" alt="Animated walkthrough of the Geneomelpha interface" width="95%" />
-  </a>
-</p>
+I wanted to explore the **communication layer around genomic interpretation**:
 
-<p align="center">
-  <strong>👆 Select the walkthrough to open the live platform.</strong>
-</p>
+- how a user enters a report workflow,
+- how different genomic domains can be separated,
+- how technical terminology can be explained,
+- how limitations can be shown alongside findings,
+- and how the final output can encourage a better conversation with a clinician or genetic counsellor.
 
-[!NOTE]The public application and repository demonstrate an educational interface concept. Do not upload real genomic reports, identifying health information, or confidential laboratory data.
+The repository represents that exploration in prototype form.
 
-<a id="platform-in-60-seconds"></a>
+---
 
-⚡ Geneomelpha in 60 seconds
+## What Geneomelpha is
 
-01 · The problem
+Geneomelpha is a **proof-of-concept web application** built around a guided genomic-report explanation workflow.
 
-02 · The approach
+The current prototype contains:
 
-03 · The intended value
+- a responsive HTML/CSS/JavaScript interface,
+- genomic-domain selection,
+- a demonstration report-upload form,
+- an Express backend,
+- file handling using Multer,
+- domain-specific explanatory templates,
+- structured summary rendering,
+- limitations and suggested next steps,
+- client-side PDF export,
+- research documentation,
+- interface screenshots,
+- and a public frontend demonstration.
 
-Genomic reports can be technically dense and difficult for non-specialists to navigate.
+It is deliberately presented as a prototype rather than as a finished clinical platform.
 
-Organize report concepts into domain-specific, plain-language explanations and a guided interface.
+---
 
-Support genomic literacy and better-informed conversations with qualified clinicians or genetic counsellors.
+## What Geneomelpha is **not**
 
-Geneomelpha sits at the intersection of bioinformatics, clinical-genomics communication, scientific visualization, and healthcare interface design. It demonstrates how a complex report journey could become easier to follow without pretending that software can replace professional interpretation.
+This distinction is important to me because a polished interface can easily make an early-stage research prototype look more capable than it really is.
 
-[!IMPORTANT]Geneomelpha is not clinically validated. It is not a diagnostic system, treatment recommender, risk calculator, regulated medical device, or substitute for clinician and genetic-counsellor review.
+Geneomelpha currently **does not** perform:
 
-Who is it designed to help?
+- clinical diagnosis,
+- ACMG/AMP variant classification,
+- pathogenicity prediction,
+- automated ClinVar interpretation,
+- therapy recommendation,
+- validated pharmacogenomic recommendation,
+- genomic risk prediction,
+- production-grade report parsing,
+- clinical decision support,
+- or autonomous AI-based genomic interpretation.
 
-Audience
+It is also **not clinically validated** and should not be used with real patient information for medical decision-making.
 
-What the concept explores
+For the full boundary statement, see [`docs/research_limitations.md`](docs/research_limitations.md).
 
-👤 Patients and families
+---
 
-Clearer vocabulary and a more navigable explanation flow
+## A particularly important implementation detail
 
-🩺 Clinicians and counsellors
+The current backend accepts a demonstration report file, but **the biological contents of that uploaded report are not yet parsed**.
 
-A possible communication aid for patient discussions
+At this stage, the backend uses:
 
-🧬 Researchers
+- user-entered demonstration metadata,
+- the selected genomic domain,
+- the stated reason for testing,
+- and predefined explanatory language
 
-A translational interface between genomic evidence and public understanding
+to construct a structured summary.
 
-🎓 Students
+That means the current repository demonstrates the **workflow and communication architecture**, not a validated genomic interpretation engine.
 
-An educational example of human-centered bioinformatics
+I have kept this distinction explicit because the next research problem is exactly here: moving from an interface prototype to a traceable, evidence-based interpretation layer.
 
-🏥 Health organizations
+---
 
-A starting point for genomic-literacy and usability research
+## Current workflow
 
-<a id="modules"></a>
+The prototype follows this path:
 
-✨ Explore the genomic modules
+```text
+Select genomic domain
+        ↓
+Enter demonstration details
+        ↓
+Attach a non-sensitive sample file
+        ↓
+Send form data to the prototype API
+        ↓
+Generate a structured explanatory summary
+        ↓
+Show terminology + limitations + next steps
+        ↓
+Optionally export the summary as PDF
+        ↓
+Review the original report with a qualified professional
+```
 
-<table>
-  <tr>
-    <td align="center" width="33%"><img src="assets/icons/cancer-genomics.svg" width="38" alt="Cancer genomics" /><br /><strong>Cancer genomics</strong><br />Tumour profiling and biomarker-report concepts</td>
-    <td align="center" width="33%"><img src="assets/icons/pharmacogenomics.svg" width="38" alt="Pharmacogenomics" /><br /><strong>Pharmacogenomics</strong><br />Drug–gene terminology and response concepts</td>
-    <td align="center" width="33%"><img src="assets/icons/prenatal.svg" width="38" alt="Prenatal screening" /><br /><strong>Prenatal screening</strong><br />NIPT and chromosomal-screening concepts</td>
-  </tr>
-  <tr>
-    <td align="center" width="33%"><img src="assets/icons/carrier-screening.svg" width="38" alt="Carrier screening" /><br /><strong>Carrier screening</strong><br />Inheritance and carrier-status concepts</td>
-    <td align="center" width="33%"><img src="assets/icons/microbiome.svg" width="38" alt="Microbiome" /><br /><strong>Microbiome</strong><br />Microbial-community and diversity concepts</td>
-    <td align="center" width="33%"><img src="assets/icons/rare-disease.svg" width="38" alt="Rare disease" /><br /><strong>Rare disease</strong><br />Gene-panel and inherited-condition concepts</td>
-  </tr>
-</table>
-
-<details>
-<summary><strong>🔎 What is implemented today?</strong></summary>
-
-<br />
-
-The repository contains a responsive interface, domain-selection screens, a demonstration upload form, structured explanatory text, local PDF export concepts, documentation, and a Node/Express prototype backend.
-
-It does not currently contain a validated genomic interpretation engine, evidence-backed variant classification, a production database, clinical decision support, or demonstrated AI-assisted interpretation.
-
-</details>
-
-<a id="workflow"></a>
-
-🔄 From complex report to clearer conversation
-
-flowchart TD
-    A["🧬 Choose a genomic domain"] --> B["👤 Enter demonstration details"]
-    B --> C["📄 Add a non-sensitive sample report"]
-    C --> D["🔎 Generate a structured explanation"]
-    D --> E["💬 Review with a qualified professional"]
+A visual version is available here:
 
 <p align="center">
   <a href="assets/user-workflow.png">
-    <img src="assets/user-workflow.png" alt="Geneomelpha user workflow" width="94%" />
+    <img src="assets/user-workflow.png" alt="Geneomelpha workflow" width="90%" />
   </a>
 </p>
 
+---
+
+## Genomic domains currently represented in the interface
+
+The current services page contains six entry points:
+
+| Domain | What I wanted the interface to explore |
+|---|---|
+| **Oncology** | Communicating tumour-panel and cancer-genomics terminology |
+| **Rare disease** | Explaining inherited-disease and gene-panel concepts |
+| **Pharmacogenomics** | Framing genetic influences on drug response |
+| **Cardio genomics** | Presenting cardiac gene-panel concepts |
+| **Carrier screening** | Explaining carrier status and inheritance |
+| **Research** | Presenting genomic findings to non-specialist research stakeholders |
+
+These are **communication prototypes**, not validated domain-specific interpretation pipelines.
+
+---
+
+## What happens in the code
+
+The implementation is intentionally small enough that another researcher can inspect the entire workflow without having to understand a large framework.
+
+### Frontend
+
+The frontend is written in:
+
+- HTML5
+- CSS3
+- vanilla JavaScript
+
+The main workflow is handled in [`frontend/script.js`](frontend/script.js).
+
+The browser:
+
+1. reads the selected domain,
+2. collects form data,
+3. sends the request to the backend,
+4. receives a structured JSON summary,
+5. renders the explanation,
+6. displays limitations and next steps,
+7. and can generate a PDF using jsPDF.
+
+The current API base configured in the frontend is:
+
+```javascript
+http://localhost:4000
+```
+
+and the analysis request is sent to:
+
+```text
+POST /api/analyse-report
+```
+
+---
+
+### Backend
+
+The prototype backend is in [`backend/server.js`](backend/server.js).
+
+It uses:
+
+```text
+Node.js
+Express
+Multer
+CORS
+```
+
+The backend currently:
+
+- accepts the form submission,
+- accepts one uploaded file,
+- stores basic file metadata,
+- applies a 10 MB file-size limit,
+- selects explanatory wording according to the genomic domain,
+- generates a structured response,
+- and returns that response to the frontend.
+
+The backend runs on:
+
+```text
+PORT 4000
+```
+
+unless a different `PORT` environment variable is supplied.
+
+---
+
+## Why I structured the output this way
+
+One design decision I kept coming back to was that an explanation should not contain only a result.
+
+A user also needs to know:
+
+1. **What is being described?**
+2. **What do the unfamiliar terms mean?**
+3. **What can this information not tell them?**
+4. **What should they discuss with a professional next?**
+
+The prototype response therefore separates the output into:
+
+```text
+Report context
+      │
+      ├── Overview
+      │
+      ├── Common genomic terminology
+      │
+      ├── Limitations
+      │
+      └── Suggested next steps
+```
+
+I prefer this structure to a single generated paragraph because it makes uncertainty and limitations visible rather than burying them at the end.
+
+---
+
+## Interface preview
+
 <p align="center">
-  <a href="docs/workflow.md"><strong>Open workflow notes →</strong></a>
-  &nbsp;·&nbsp;
-  <a href="docs/architecture.md"><strong>Open architecture notes →</strong></a>
+  <a href="assets/geneomelpha-demo.gif">
+    <img src="assets/geneomelpha-demo.gif" alt="Geneomelpha interface walkthrough" width="90%" />
+  </a>
 </p>
 
-<a id="gallery"></a>
-
-🖥️ Platform gallery
-
-<p align="center">Select any screen to open the full-resolution image.</p>
+### A few screens from the prototype
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <a href="screenshots/Homepage.png"><img src="screenshots/Homepage.png" alt="Geneomelpha service-selection homepage" width="100%" /></a><br />
-      <strong>🏠 Service selection</strong>
+    <td width="50%" align="center">
+      <a href="screenshots/Homepage.png">
+        <img src="screenshots/Homepage.png" alt="Homepage" width="100%" />
+      </a>
+      <br />
+      <strong>Service-selection interface</strong>
     </td>
-    <td align="center" width="50%">
-      <a href="screenshots/analysis-page.png"><img src="screenshots/analysis-page.png" alt="Geneomelpha report-analysis screen" width="100%" /></a><br />
-      <strong>🔎 Report-analysis flow</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <a href="screenshots/cancer-genomics.png"><img src="screenshots/cancer-genomics.png" alt="Cancer genomics module" width="100%" /></a><br />
-      <strong>🧬 Cancer genomics</strong>
-    </td>
-    <td align="center" width="50%">
-      <a href="screenshots/microbiome.png"><img src="screenshots/microbiome.png" alt="Microbiome module" width="100%" /></a><br />
-      <strong>🦠 Microbiome</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <a href="screenshots/pharmacogenomics.png"><img src="screenshots/pharmacogenomics.png" alt="Pharmacogenomics module" width="100%" /></a><br />
-      <strong>💊 Pharmacogenomics</strong>
-    </td>
-    <td align="center" width="50%">
-      <a href="screenshots/prenatal.png"><img src="screenshots/prenatal.png" alt="Prenatal screening module" width="100%" /></a><br />
-      <strong>👶 Prenatal screening</strong>
+    <td width="50%" align="center">
+      <a href="screenshots/analysis-page.png">
+        <img src="screenshots/analysis-page.png" alt="Analysis page" width="100%" />
+      </a>
+      <br />
+      <strong>Demonstration analysis workflow</strong>
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <a href="screenshots/mobile-view.jpg"><strong>📱 Open the mobile-view preview</strong></a>
-</p>
-
-<a id="architecture"></a>
-
-🏗️ Architecture at a glance
-
-<p align="center">
-  <a href="assets/system-architecture.png">
-    <img src="assets/system-architecture.png" alt="Geneomelpha system architecture" width="94%" />
-  </a>
-</p>
-
-Layer
-
-Repository implementation
-
-Current role
-
-🎨 Interface
-
-HTML5, CSS3, JavaScript
-
-Domain selection, forms, summaries, responsive views
-
-⚙️ Prototype API
-
-Node.js, Express, Multer, CORS
-
-Demonstration upload and structured response flow
-
-📄 Document output
-
-jsPDF in the browser
-
-Prototype PDF-summary export
-
-📚 Research layer
-
-Markdown documentation
-
-Scope, motivation, validation plan, and limitations
-
-☁️ Public preview
-
-Netlify
-
-Frontend demonstration
-
-<details>
-<summary><strong>⚠️ Current integration gaps</strong></summary>
-
-<br />
-
-The committed frontend pages still contain the earlier internal name Genexis Genomics; repository branding is Geneomelpha.
-
-The root package.json points to server.cjs, but that file is absent.
-
-The prototype frontend and backend use inconsistent API routes and ports in different source files.
-
-No MongoDB connection or database dependency is implemented in the repository.
-
-QR verification is represented as a concept, not a production verification service.
-
-AI-assisted interpretation, ACMG/AMP classification, and clinical validation remain future work.
-
-These are development gaps, not hidden features. See the research and clinical limitations before evaluating or extending the project.
-
-</details>
-
-<a id="reviewer-hub"></a>
-
-🔬 Reviewer & research hub
-
-<table>
-  <tr>
-    <th align="left">Route</th>
-    <th align="left">What it answers</th>
-  </tr>
-  <tr>
-    <td>🎯 <a href="docs/reviewer_summary.md"><strong>Reviewer summary</strong></a></td>
-    <td>What was built, why it matters, and how it should be evaluated</td>
-  </tr>
-  <tr>
-    <td>🛑 <a href="docs/research_limitations.md"><strong>Research limitations</strong></a></td>
-    <td>What the platform explicitly does not claim</td>
-  </tr>
-  <tr>
-    <td>🏗️ <a href="docs/architecture.md"><strong>Architecture</strong></a></td>
-    <td>How the prototype components are separated</td>
-  </tr>
-  <tr>
-    <td>🔄 <a href="docs/workflow.md"><strong>User workflow</strong></a></td>
-    <td>How a user moves through the demonstration</td>
-  </tr>
-  <tr>
-    <td>🧪 <a href="research/validation-strategy.md"><strong>Validation strategy</strong></a></td>
-    <td>What must be tested before stronger claims are possible</td>
-  </tr>
-  <tr>
-    <td>🚀 <a href="research/future-research.md"><strong>Future research</strong></a></td>
-    <td>Long-term research directions—not current capabilities</td>
-  </tr>
-</table>
-
-<details>
-<summary><strong>📚 Open the complete documentation map</strong></summary>
-
-<br />
-
-Area
-
-Direct links
-
-Project setup
-
-Installation · Documentation index · FAQ
-
-Research basis
-
-Project concept · Clinical motivation · References
-
-Source
-
-Frontend · Prototype backend · Root prototype script
-
-Governance
-
-Citation · License · Contributing
-
-</details>
-
-<a id="eccb"></a>
-
-🎤 Researcher spotlight · ECCB 2026
-
-25th European Conference on Computational Biology📍 Geneva, Switzerland · 📅 31 August–4 September 2026
-
-Ritika Rawat is listed as the first and presenting author of poster C-G.32, “Evolutionary Conservation and Functional Constraints of TP53 Mutation Hotspots Across Mammalian Species,” in the Genomics, Epigenomics, and Genome Editing track. She is also a selected ECCB 2026 volunteer for 31 August and 1 September 2026.
-
-<p align="center">
-  <a href="https://transition.iscb.org/cms_addon/conferences/eccb2026/posters.php?session=C&track=Genomics">
-    <img src="https://img.shields.io/badge/ECCB_2026-OPEN_POSTER_PROGRAM-0A7EA4?style=for-the-badge" alt="Open the ECCB 2026 poster programme" />
-  </a>
-  <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals">
-    <img src="https://img.shields.io/badge/TP53_STUDY-OPEN_REPOSITORY-6D28D9?style=for-the-badge&logo=github&logoColor=white" alt="Open the TP53 mammalian conservation repository" />
-  </a>
-</p>
-
-[!IMPORTANT]The accepted ECCB poster is the TP53 mammalian-conservation study, not Geneomelpha. Geneomelpha is a separate project in Ritika's broader translational-bioinformatics portfolio.
-
-<a id="roadmap"></a>
-
-🚀 From prototype to responsible research platform
-
-<p align="center">
-  <a href="assets/future-roadmap.png">
-    <img src="assets/future-roadmap.png" alt="Geneomelpha future research roadmap" width="94%" />
-  </a>
-</p>
-
-Horizon
-
-Priority
-
-Evidence required before release
-
-🟢 Foundation
-
-Align branding, routes, packaging, and demo behavior
-
-End-to-end fixture tests and reproducible setup
-
-🔵 Evidence layer
-
-Trace explanations to curated genomic sources
-
-Expert review, source provenance, versioned evidence
-
-🟣 Interpretation research
-
-Explore ACMG/AMP support and pharmacogenomic evidence
-
-Benchmarking, uncertainty handling, audit trails
-
-🟠 Usability
-
-Evaluate comprehension and accessibility
-
-Studies with clinicians, counsellors, students, and intended users
-
-🔴 Clinical direction
-
-Consider regulated clinical workflows
-
-Privacy, security, regulatory, ethical, and prospective validation
-
-A roadmap is an intention, not evidence that these capabilities already exist.
-
-<a id="run-locally"></a>
-
-⚙️ Inspect the prototype locally
-
+---
+
+## Repository structure
+
+```text
+Geneomelpha/
+│
+├── frontend/
+│   ├── index.html
+│   ├── services.html
+│   ├── analysis.html
+│   ├── summary.html
+│   ├── styles.css
+│   └── script.js
+│
+├── backend/
+│   ├── server.js
+│   └── package.json
+│
+├── research/
+│   ├── project-concept.md
+│   ├── clinical-motivation.md
+│   ├── validation-strategy.md
+│   ├── future-research.md
+│   └── references.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── workflow.md
+│   ├── reviewer_summary.md
+│   ├── research_limitations.md
+│   ├── installation.md
+│   └── future-roadmap.md
+│
+├── assets/
+├── screenshots/
+├── CITATION.cff
+├── LICENSE
+├── package.json
+├── server.js
+└── README.md
+```
+
+---
+
+## A note on the development history
+
+This repository has gone through several iterations.
+
+The interface originally used the working name **Genexis Genomics** before I moved the repository identity to **Geneomelpha**.
+
+Because of that, some committed frontend files still contain the earlier name.
+
+I have not tried to hide that development history in the README because this is still an evolving research prototype, and I think the unfinished parts are useful for understanding how the project developed.
+
+There are also two pieces of legacy structure that are worth knowing about:
+
+- the root [`package.json`](package.json) still points to `server.cjs`, which is not currently present;
+- the root [`server.js`](server.js) belongs to an earlier browser-side prototype and uses a different route/port from the current `frontend/` + `backend/` workflow.
+
+For the current local prototype, I use the code inside `frontend/` and `backend/`.
+
+---
+
+## Run the current prototype locally
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Rita1791/Geneomelpha.git
 cd Geneomelpha
-python3 -m http.server 8080 --directory frontend
+```
 
-Open http://localhost:8080 to inspect the committed frontend.
+### 2. Start the backend
 
-<details>
-<summary><strong>Run the prototype Express backend</strong></summary>
-
-<br />
-
+```bash
 cd backend
 npm install
 npm start
+```
 
-The backend starts on port 4000 by default. The current frontend/backend integration still needs route and configuration alignment before it can be described as a complete end-to-end application.
+The backend should start on:
 
-</details>
+```text
+http://localhost:4000
+```
 
-<a id="cite"></a>
+### 3. Serve the frontend
 
-📖 Cite, contribute, or continue the work
+From another terminal, return to the repository root and run a simple static server.
 
-Cite: use the repository's CITATION.cff through GitHub's Cite this repository menu.
+For example:
 
-Contribute: fork the repository, create a focused branch, document the change, and open a pull request.
+```bash
+python -m http.server 8080 --directory frontend
+```
 
-Report a problem: open a GitHub issue.
+or:
 
-Respect the boundary: never commit real patient reports, identifiable health information, private credentials, or confidential laboratory data.
+```bash
+python3 -m http.server 8080 --directory frontend
+```
 
-<a id="connect"></a>
+Then open:
 
-👩‍💻 Connect with the researcher
+```text
+http://localhost:8080
+```
 
-<table>
-  <tr>
-    <td width="26%" align="center">
-      <img src="assets/icons/researcher.svg" width="74" alt="Researcher profile" />
-    </td>
-    <td width="74%">
-      <h3>Ritika Rajendra Rawat</h3>
-      <strong>Bioinformatics Research Assistant · M.Sc. Bioinformatics</strong><br />
-      Guru Nanak Khalsa College (Autonomous), Mumbai · University of Mumbai<br /><br />
-      Research interests: computational biology, clinical genomics, precision medicine, explainable biomedical AI, and human-centered healthcare technology.
-    </td>
-  </tr>
-</table>
+VS Code Live Server can also be used for the frontend.
+
+---
+
+## What I learned while building it
+
+The useful part of this project for me has not been the amount of code.
+
+It has been identifying where the difficult boundaries are.
+
+### 1. Genomic interpretation and genomic communication are different problems
+
+A technically correct variant classification can still be difficult for a patient to understand.
+
+At the same time, simplifying the language too aggressively can remove uncertainty that is scientifically important.
+
+That tension became one of the main design considerations in Geneomelpha.
+
+### 2. Limitations need to be part of the output
+
+I initially thought mainly about presenting the explanation.
+
+While developing the workflow, it became clear that a responsible interface should give equal visibility to what the result **cannot** establish.
+
+That is why limitations and professional follow-up are separate parts of the current summary structure.
+
+### 3. A good interface cannot compensate for an unvalidated evidence layer
+
+The UI can be polished long before the underlying genomic interpretation is scientifically mature.
+
+For this reason, I now treat the interface and interpretation engine as separate layers.
+
+The current repository demonstrates the interface layer.
+
+The interpretation layer is the part that would require substantially more validation, provenance tracking, clinical expertise, and benchmarking.
+
+### 4. Traceability matters more than impressive output
+
+For any future automated interpretation system, I would want each biological statement to be traceable to:
+
+```text
+variant
+→ evidence source
+→ classification rule
+→ interpretation
+→ version/date
+→ reviewer
+```
+
+Without that traceability, a fluent explanation is not enough.
+
+---
+
+## Current limitations I would want a reviewer to notice
+
+Rather than presenting these as hidden technical debt, I consider them part of the current state of the research prototype.
+
+### Report parsing
+
+The uploaded report is currently accepted as a file, but its genomic contents are not parsed into variants or biomarkers.
+
+### Interpretation
+
+The current response is template-based and domain-aware. It is not evidence-backed variant interpretation.
+
+### Database
+
+There is no production genomic database or patient database implemented.
+
+### Clinical evidence
+
+There is no current integration with ClinVar, ClinGen, PharmGKB, CIViC, OncoKB, or another curated knowledge source.
+
+### Variant classification
+
+No ACMG/AMP classification engine is implemented.
+
+### Clinical validation
+
+No clinical validation, diagnostic benchmarking, or prospective patient evaluation has been performed.
+
+### AI
+
+The repository does **not** currently demonstrate an AI/LLM genomic interpretation system.
+
+If an AI component is investigated later, I would treat it as an explanation layer around verified evidence rather than as the source of clinical truth.
+
+### Privacy
+
+The project is not designed to receive real patient genomic data in its current form.
+
+**Please do not upload identifiable genomic reports or confidential health information.**
+
+---
+
+## One piece of old interface copy that should not be interpreted as a result
+
+An early frontend version contains the phrase:
+
+> `1000+ reports summarised`
+
+This is **prototype interface copy**, not a measured usage statistic or validation claim.
+
+I am documenting it here because I would rather make the status explicit than allow a reviewer to interpret a visual placeholder as research evidence.
+
+---
+
+## What I would work on next
+
+If I continue this project toward a research-grade system, I would not begin by adding more visual features.
+
+The next steps I consider more important are:
+
+### 1. Build a reproducible parsing layer
+
+Start with a controlled set of **synthetic or de-identified genomic reports** and define exactly which report structures can be extracted reliably.
+
+Possible output:
+
+```text
+gene
+variant
+transcript
+zygosity / allele fraction
+classification
+disease association
+evidence source
+```
+
+### 2. Add evidence provenance
+
+Every interpretation should carry its source and version.
+
+For example:
+
+```text
+Variant
+  ↓
+Curated database evidence
+  ↓
+Classification rule
+  ↓
+Human-readable explanation
+```
+
+### 3. Separate evidence from language generation
+
+The biological conclusion and the wording shown to the user should not be produced by the same uncontrolled step.
+
+A safer architecture would be:
+
+```text
+validated structured evidence
+            ↓
+controlled interpretation layer
+            ↓
+patient-friendly explanation
+            ↓
+professional review
+```
+
+### 4. Evaluate comprehension
+
+A useful translational genomics system should be evaluated not only for computational correctness but also for whether users actually understand the information better.
+
+I would therefore want to test:
+
+- terminology comprehension,
+- perceived clarity,
+- misunderstanding of risk,
+- interpretation of uncertainty,
+- usefulness of visual summaries,
+- and whether users know when professional review is required.
+
+### 5. Include clinical and genetic-counselling review
+
+Before stronger claims are made, the wording and workflow should be reviewed by people who routinely communicate genomic findings in clinical settings.
+
+More detail is in:
+
+- [`research/validation-strategy.md`](research/validation-strategy.md)
+- [`research/future-research.md`](research/future-research.md)
+- [`docs/research_limitations.md`](docs/research_limitations.md)
+
+---
+
+## Architecture
+
+The conceptual architecture is shown below.
 
 <p align="center">
-  <a href="https://github.com/Rita1791">
-    <img src="https://img.shields.io/badge/VIEW_GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Ritika's GitHub" />
+  <a href="assets/system-architecture.png">
+    <img src="assets/system-architecture.png" alt="Geneomelpha system architecture" width="90%" />
   </a>
-  <a href="https://in.linkedin.com/in/ritika-rawat-551107219">
-    <img src="https://img.shields.io/badge/CONNECT_ON_LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect with Ritika on LinkedIn" />
-  </a>
-  <a href="mailto:ritika.rawat27@outlook.com?subject=Geneomelpha%20Research%20Enquiry">
-    <img src="https://img.shields.io/badge/EMAIL_RITIKA-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritika" />
-  </a>
 </p>
 
-<p align="center">
-  <strong>“Genomic information should be understandable, accessible, and meaningful—not restricted to specialists.”</strong>
-</p>
+For the current repository, I think of the project as four practical layers:
 
-<p align="center">
-  <a href="#explore">Back to the navigator ↑</a>
-  &nbsp;·&nbsp;
-  <a href="https://genelpha.netlify.app/">Open Geneomelpha ↗</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Rita1791/Geneomelpha">Star the repository ⭐</a>
-</p>
+| Layer | Current repository role |
+|---|---|
+| **Interface** | Domain selection, forms, result display and responsive views |
+| **Prototype API** | Receives demonstration metadata and uploaded files |
+| **Explanation layer** | Domain-specific structured educational text |
+| **Research layer** | Documents scope, limitations, validation and future work |
 
-<p align="center">
-  <sub>Geneomelpha · Bridging Genomics &amp; Understanding · MIT License</sub>
-</p>
+The more advanced clinical interpretation components shown in conceptual diagrams should be treated as **future architecture**, not current functionality.
+
+---
+
+## Research documentation
+
+For someone reviewing the repository from a research perspective, these are the files I would read after this README:
+
+### [`docs/reviewer_summary.md`](docs/reviewer_summary.md)
+
+Short description of the purpose and current contribution.
+
+### [`docs/research_limitations.md`](docs/research_limitations.md)
+
+The scientific and clinical boundary of the project.
+
+### [`research/project-concept.md`](research/project-concept.md)
+
+The original project idea.
+
+### [`research/clinical-motivation.md`](research/clinical-motivation.md)
+
+Why genomic communication is the problem being explored.
+
+### [`research/validation-strategy.md`](research/validation-strategy.md)
+
+What would need to be tested before stronger claims are justified.
+
+### [`research/future-research.md`](research/future-research.md)
+
+Longer-term research directions.
+
+### [`docs/architecture.md`](docs/architecture.md)
+
+Component-level architecture notes.
+
+### [`docs/workflow.md`](docs/workflow.md)
+
+User-flow documentation.
+
+---
+
+## How I would describe the contribution today
+
+If I had to describe Geneomelpha in one sentence without overselling it:
+
+> **Geneomelpha is a working interface prototype that I use to explore how genomic information could be organised and communicated more clearly while keeping uncertainty, limitations, and professional interpretation visible.**
+
+Its contribution today is therefore mainly in:
+
+- translational bioinformatics thinking,
+- genomic communication,
+- workflow design,
+- human-centred interface development,
+- and defining a path toward a more rigorous evidence-backed system.
+
+It is not yet a contribution in automated clinical variant interpretation.
+
+---
+
+## Live demonstration
+
+The public frontend demonstration is available at:
+
+**https://genelpha.netlify.app/**
+
+The live deployment should be treated as an **interface demonstration only**.
+
+Do not upload real genomic reports or identifiable medical information.
+
+---
+
+## Citation
+
+If you use or reference this project, citation metadata is available in [`CITATION.cff`](CITATION.cff).
+
+```text
+Ritika Rajendra Rawat
+Geneomelpha
+Version 1.0.0
+2026
+```
+
+---
+
+## License
+
+This repository is released under the [MIT License](LICENSE).
+
+The software license does not change the clinical-use restrictions described above.
+
+---
+
+## About the researcher
+
+**Ritika Rajendra Rawat**
+
+I am interested in the point where computational genomics stops being only an analysis problem and becomes a communication problem: how genomic evidence is structured, interpreted, visualised, and finally understood by another person.
+
+Geneomelpha is one of my attempts to explore that interface through code rather than treating it only as a theoretical question.
+
+- GitHub: [Rita1791](https://github.com/Rita1791)
+- LinkedIn: [Ritika Rawat](https://in.linkedin.com/in/ritika-rawat-551107219)
+- Email: [ritika.rawat27@outlook.com](mailto:ritika.rawat27@outlook.com)
+
+---
+
+### Final note
+
+This repository is still evolving.
+
+There are parts I would refactor, parts I would validate differently, and parts that are currently only conceptual. I have tried to keep those boundaries visible rather than make the project appear more finished than it is.
+
+For me, the useful research question is not whether a prototype can produce a polished genomic summary.
+
+It is whether we can eventually build a system in which **every simplified statement remains traceable to reliable biological evidence, preserves uncertainty, and helps rather than replaces the professional interpreting it.**
